@@ -105,6 +105,14 @@ input.ng-invalid {
     width: 100%;
 }
 
+.aegis-margin-top-2 {
+    margin-top: 2%;
+}
+
+.aegis-w90 {
+    width: 90%;
+}
+
 .aegis-text-bold {
     font-weight: bold;
 }
