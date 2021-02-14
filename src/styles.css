@@ -1,1 +1,120 @@
 /* You can add global styles to this file, and also import other style files */
+
+.aegis-button {
+    height    : 40px;
+    border    : 0;
+    min-width : 100px;
+    outline   : none;
+    box-shadow: 0px 0px 8px 0px rgb(0 0 0 / 90%);
+    animation : aegis-button-click 0.7s linear infinite;
+}
+
+.aegis-dark {
+    background-color: rgba(24, 24, 24, 0.9);
+    color           : white;
+}
+
+.aegis-light {
+    background-color: rgba(255, 255, 255, 0.9);
+    color           : black;
+}
+
+.aegis-text-input {
+    width         : 100%;
+    display       : flex;
+    height        : 40px;
+    letter-spacing: 7px;
+    padding-left  : 7px;
+    font-size     : x-large;
+    border        : 0;
+}
+
+.aegis-text-input::placeholder {
+    font-size: x-large;
+    color    : rgb(187, 187, 187);
+}
+
+.aegis-text-input:focus {
+    border : 0;
+    outline: none;
+}
+
+.aegis-text-input:active {
+    border : 0;
+    outline: none;
+}
+
+.aegis-main-center-flex {
+    display        : flex;
+    justify-content: center;
+
+}
+
+span {
+    color         : rgb(0 140 201);
+    padding-bottom: 2%;
+}
+
+.aegis-margin-left-4 {
+    margin-left: 4%;
+}
+
+.aegis-margin-bottom-2 {
+    margin-bottom: 2%;
+}
+
+.aegis-margin-bottom-4 {
+    margin-bottom: 4%;
+}
+
+input.ng-invalid {
+    box-shadow: 0px 0px 8px 0px rgb(255 110 78/70%);
+}
+
+
+.aegis-main-end-flex {
+    display        : flex;
+    justify-content: flex-end;
+
+}
+
+.aegis-main-between-flex {
+    display        : flex;
+    justify-content: space-between;
+}
+
+.aegis-cross-center-flex {
+    display    : flex;
+    align-items: center;
+}
+
+.aegis-cross-end-flex {
+    display    : flex;
+    align-items: flex-end;
+}
+
+.aegis-text-center {
+    text-align: center;
+}
+
+.aegis-flex {
+    display: flex;
+}
+
+.aegis-w100 {
+    width: 100%;
+}
+
+.aegis-text-bold {
+    font-weight: bold;
+}
+
+@keyframes aegis-button-click {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0.97);
+    }
+}

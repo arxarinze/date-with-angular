@@ -1,0 +1,14 @@
+.credit-card {
+    width        : 50%;
+    height       : 400px;
+    box-shadow   : 0px 0px 8px 0px rgb(0 0 0 / 40%);
+    padding      : 2%;
+    border-radius: 10px;
+}
+
+.card-form {
+    height         : 100%;
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-between;
+}

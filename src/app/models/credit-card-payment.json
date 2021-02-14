@@ -1,0 +1,36 @@
+{
+    "$id": "",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Credit Card Payment",
+    "type": "object",
+    "properties": {
+      "creditCardNumber": {
+        "type": "string",
+        "description": "The Credit Card Number"
+      },
+      "cardHolder": {
+        "type": "string",
+        "description": "The Credit Card Holder's Name"
+      },
+      "expirationDate": {
+        "type": "string",
+        "format": "date",
+        "description": "The Expiration Date"
+      },
+      "securityCode": {
+        "type": "string",
+        "description": "The customers email address"
+      },
+      "amount": {
+        "type": "number",
+        "description": "The amount to be paid"
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+        "creditCardNumber",
+        "cardHolder",
+        "expirationDate",
+        "securityCode"
+    ]
+  }
