@@ -1,6 +1,6 @@
-import { reducer, initialState } from './credit-card-payment.reducer';
+import { reducer, initialState } from './payment.reducer';
 
-describe('CreditCardPayment Reducer', () => {
+describe('Payment Reducer', () => {
   describe('an unknown action', () => {
     it('should return the previous state', () => {
       const action = {} as any;

@@ -5,23 +5,23 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CreditCardPaymentComponent } from './credit-card-payment-component/credit-card-payment.component';
+import { PaymentComponent } from './payment-component/payment.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
-import { creditCardPaymentFeatureKey, reducer } from './store/creditcard/store/reducer/credit-card-payment.reducer';
+import { PaymentFeatureKey, reducer } from './store/payment/store/reducer/payment.reducer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { MockModule } from './mock/mock.module';
-import { CreditCardPaymentService } from './credit-card-payment-component/credit-card-payment.service';
+import { PaymentService } from './payment-component/payment.service';
 const mockModule = environment.mockApi ? [MockModule] : [];
 @NgModule({
   declarations: [
     AppComponent,
-    CreditCardPaymentComponent
+    PaymentComponent
   ],
   imports: [
     ...mockModule,
@@ -33,13 +33,13 @@ const mockModule = environment.mockApi ? [MockModule] : [];
     AppRoutingModule,
 
     RouterModule.forRoot([
-      { path: 'credit-card-pay', component: CreditCardPaymentComponent },
+      { path: 'pay', component: PaymentComponent },
     ]),
     StoreModule.forRoot(reducers, { metaReducers }),
-    StoreModule.forFeature(creditCardPaymentFeatureKey, reducer),
+    StoreModule.forFeature(PaymentFeatureKey, reducer),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
   ],
-  providers: [CreditCardPaymentService],
+  providers: [PaymentService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

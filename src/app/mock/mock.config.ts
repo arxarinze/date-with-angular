@@ -2,12 +2,12 @@ import { of } from 'rxjs';
 import { HttpRequest, HttpResponse } from '@angular/common/http';
 // Local imports
 
-import { CreditCardPayment } from '../models/credit-card-payment';
+import {Payment } from '../models/payment.model';
 
 
 let payments: any[] = [];
 const addPayment = (request: HttpRequest<any>) => {
-    const payment = request.body as CreditCardPayment;
+    const payment = request.body as Payment;
     const res = {
         status: 200,
         payment: payment

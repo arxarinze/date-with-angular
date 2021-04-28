@@ -1,6 +1,6 @@
 
 
-describe('CreditCardPayment Selectors', () => {
+describe('Payment Selectors', () => {
   it('should select the feature state', () => {
     
   });

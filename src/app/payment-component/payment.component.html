@@ -1,0 +1,91 @@
+<div class="container-fluid p-0 m-0">
+
+    <div class="row pcard">
+        <form (ngSubmit)="onSubmit()" class="col-md-12 col-12 col-sm-12 start" *ngIf="registerForm"
+            [formGroup]="registerForm">
+            <div class="row">
+                <div class="col-6">
+                    <input type="text" formControlName="firstName" class=" aegis-text-input" placeholder="First Name" />
+                </div>
+                <div class="col-6">
+                    <input type="text" formControlName="lastName" class=" aegis-text-input" placeholder="Last Name" />
+
+                </div>
+            </div>
+            <div class="mt-4 row">
+                <input type="text" formControlName="email" class=" aegis-text-input" placeholder="Work Email" />
+
+            </div>
+            <div class="mt-4 row">
+                <input type="number" formControlName="monthlyAdvertisingBudget" class=" aegis-text-input"
+                    placeholder="Monthly Advertising Budget" />
+            </div>
+            <div class="mt-4 row">
+                <input type="number" formControlName="phoneNumber" class=" aegis-text-input"
+                    placeholder="e.g 08053241005" minlength="11" required pattern=".{5,10}" />
+            </div>
+            <div class="mt-4 row">
+                <button [disabled]="!registerForm.valid" class="form-control">Pay</button>
+            </div>
+        </form>
+    </div>
+    <!--
+
+        <div class="credit-card">
+        <form (ngSubmit)="onSubmit()" class="card-form" *ngIf="registerForm" [formGroup]="registerForm">
+            <div class="aegis-flex">
+
+                <div>
+                    <input type="text" formControlName="firstName" class="aegis-text-input" placeholder="First Name" />
+                </div>
+
+                <div>
+                    <input type="text" formControlName="lastName" class="aegis-text-input" placeholder="Last Name" />
+
+                </div>
+            </div>
+            <div class="aegis-flex">
+                <div>
+                    <div class="aegis-margin-bottom-2">
+                        <span class="aegis-text-bold">Email</span>
+                    </div>
+                    <div class="aegis-margin-top-2">
+                        <input type="text" formControlName="email" class="aegis-text-input"
+                            placeholder="Email Address" />
+
+                    </div>
+                </div>
+            </div>
+            <div class="aegis-flex">
+                <div class="aegis-w100">
+                    <div class="aegis-w100 aegis-margin-bottom-2">
+                        <span class="aegis-text-bold">Monthly Advertising Budget</span>
+                    </div>
+                    <div class="aegis-w100">
+                        <input type="text" formControlName="monthlyAdvertisingBudget" class="aegis-text-input"
+                            placeholder="Monthly Advertising Budget" />
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="aegis-main-between-flex">
+                <div>
+                    <div class="aegis-margin-bottom-2">
+                        <span class="aegis-text-bold">Phone Number</span>
+                    </div>
+                    <div>
+                        <input type="number" formControlName="phoneNumber" class="aegis-text-input"
+                            placeholder="e.g 08053241005" minlength="11" required pattern=".{5,10}" />
+                    </div>
+                </div>
+            </div>
+            <div class="aegis-flex">
+                <button [disabled]="!registerForm.valid" class="aegis-button aegis-dark">Pay</button>
+            </div>
+
+        </form>
+    </div>
+    -->
+</div>
